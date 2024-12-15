@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>{{title}}</title>
+ <style>
+
+ </style>
+</head>
+<body>
+
+{% for author in authors %}
+<h2>{{ author.name }}</h2>
+{% if add_wikipedia %}
+<div><a href="">Wikipedia</a></div>
+{% endif %}
+<ul>
+{% for book in author.books %}
+    <li><a href="{{ book.link | urlencode }}">{{ book.name }}</a></li>
+{% endfor %}
+</ul>
+{% endfor %}
+
+</body>
+</html>

@@ -1,3 +1,4 @@
+# script to fix urls in the existing content files
 import re
 import urllib.parse
 
